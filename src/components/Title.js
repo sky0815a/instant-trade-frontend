@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Title = () => {
+const title = () => {
   return (
     <div>
       <h2>Instant Trade</h2>
     </div>
   );
 }
-export default Title
+export default title
