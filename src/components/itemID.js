@@ -57,19 +57,24 @@ export default function ItemID(props) {
   return (
     <div>
       <div className="container">
+        <div>Game: {ItemID.Game}</div>
+        <div>PW: {ItemID.PW}</div>
         <div>Type: {ItemID.type}</div>
         <div>Price: {ItemID.cost}</div>
         <div>STR: {ItemID.STR}</div>
         <div>DEX: {ItemID.DEX}</div>
-        <div>Mana: {ItemID.Mana}</div>
+        <div>Vital: {ItemID.Vital}</div>
+        <div>Energy: {ItemID.Energy}</div>
+        <div>Faster Cast Rate: {ItemID.Faster_Cast_Rate}</div>
+        <div>All Skill LV: {ItemID.All_Skill_LV}</div>
         <div>
           <button className="delete" onClick={removeItem}>
             Remove Item
           </button>
-          <Link to="/item/`${id}`/update"> 
-          <button className="update" onClick={updateItem}>
-            Update Item
-          </button>
+          <Link to="/item/`${id}`/update">
+            <button className="update" onClick={updateItem}>
+              Update Item
+            </button>
           </Link>
           <Link to="/">
             <button>back</button>

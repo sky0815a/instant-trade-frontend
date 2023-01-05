@@ -2,66 +2,76 @@ import React, { useState } from 'react'
 // import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom';
 
- function UpdateItem() {
-    const  { id } = useParams();
+function UpdateItem() {
+    const { id } = useParams();
     console.log(id);
     const BASE_URL = 'http://localhost:8080/item'
-    const [updateForm, setUpdateForm]= useState({
+    const [updateForm, setUpdateForm] = useState({
 
-    type: "",
-    cost: "",
-    STR: "",
-    DEX: "",
-    Mana: "",
-
-   })
-   const getItem = async (fn) => {
-    try {
-        const response = await fetch(BASE_URL);
-        const allItem = await response.json();
-
-    } catch (err) {
-        console.log(err);
-    }
-};
-   const updateItem = async (itemData)=>{
-    try {
-        console.log(itemData);
-        const updatedItem = await fetch (`${BASE_URL}/${id}`, {
-            method:"PUT",
-            headers:{
-                "Content-Type":"application/json",
-            },
-            body:JSON.stringify(itemData)
-        })
-        getItem()
-    }catch(err){
-        console.log(err)
-    }
-   }
-    const handleSubmit = async (e) => {
-       console.log(updateForm);
-        e.preventDefault()
-       await updateItem(updateForm)
-       setUpdateForm ({
+        Game: "",
+        PW: "",
         type: "",
         cost: "",
         STR: "",
         DEX: "",
-        Mana: "",
-        })
-      
+        Vital: "",
+        Energy: "",
+        Faster_Cast_Rate: "",
+        All_Skill_LV: "",
+
+    })
+    const getItem = async (fn) => {
+        try {
+            const response = await fetch(BASE_URL);
+            const allItem = await response.json();
+
+        } catch (err) {
+            console.log(err);
+        }
+    };
+    const updateItem = async (itemData) => {
+        try {
+            console.log(itemData);
+            const updatedItem = await fetch(`${BASE_URL}/${id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(itemData)
+            })
+            getItem()
+        } catch (err) {
+            console.log(err)
+        }
     }
-    const handleChange = (e)=>{
-        const data = {...updateForm, [e.target.name]: e.target.value}
+    const handleSubmit = async (e) => {
+        console.log(updateForm);
+        e.preventDefault()
+        await updateItem(updateForm)
+        setUpdateForm({
+            Game: "",
+            PW: "",
+            type: "",
+            cost: "",
+            STR: "",
+            DEX: "",
+            Vital: "",
+            Energy: "",
+            Faster_Cast_Rate: "",
+            All_Skill_LV: "",
+        })
+
+    }
+    const handleChange = (e) => {
+        const data = { ...updateForm, [e.target.name]: e.target.value }
         setUpdateForm(data)
-       }
+    }
     return (
         <div>
             <h2>Update Item Info</h2>
             <form onSubmit={handleSubmit}>
                 <label for="type">Type: Ring or Amulet: </label>
-                <input type="text" value={updateForm.type}  name="type" onChange={handleChange} />
+                <input type="text" value={updateForm.type} name="type" onChange={handleChange} />
                 <br />
                 <label for="cost">Cost: </label>
                 <input type="text" value={updateForm.cost} name="cost" onChange={handleChange} />
@@ -76,13 +86,12 @@ import { Link, useParams } from 'react-router-dom';
                 <input type="text" value={updateForm.Mana} name="Mana" onChange={handleChange} />
                 <br />
                 <br /><br />
-                <input type="submit" /> 
-                <Link to= '/'><button>back</button></Link>
+                <input type="submit" />
+                <Link to='/'><button>back</button></Link>
             </form>
         </div>
     )
 }
-
 
 export default UpdateItem
 

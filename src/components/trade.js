@@ -26,11 +26,16 @@ export default function Trade() {
                 {trade.map((element) => {
                     return( 
                         <div className="container">
+                            <div>Game: {element.Game}</div>
+                            <div>PW: {element.PW}</div>
                             <div>Type: {element.type}</div>
                             <div>Price: {element.cost}</div>
                             <div>STR: {element.STR}</div>
                             <div>DEX: {element.DEX}</div>
-                            <div>Mana: {element.Mana}</div>
+                            <div>Vital: {element.Vital}</div>
+                            <div>Energy: {element.Energy}</div>
+                            <div>Faster Cast Rate: {element.Faster_Cast_Rate}</div>
+                            <div>All Skill LV: {element.All_Skill_LV}</div>
                             <Link to = {`item/${element._id}`}><button> View Item </button>
                             <div>{element.item}</div></Link>
                         </div>
