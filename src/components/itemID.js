@@ -57,11 +57,11 @@ export default function ItemID(props) {
   return (
     <div>
       <div className="container">
-        <div>{ItemID.type}</div>
-        <div>{ItemID.cost}</div>
-        <div>{ItemID.STR}</div>
-        <div>{ItemID.DEX}</div>
-        <div>{ItemID.Mana}</div>
+        <div>Type: {ItemID.type}</div>
+        <div>Price: {ItemID.cost}</div>
+        <div>STR: {ItemID.STR}</div>
+        <div>DEX: {ItemID.DEX}</div>
+        <div>Mana: {ItemID.Mana}</div>
         <div>
           <button className="delete" onClick={removeItem}>
             Remove Item

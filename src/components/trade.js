@@ -17,8 +17,6 @@ export default function Trade() {
           })
     }, []);
 
-    
-
     return (
         <div>
             <div className="button">
@@ -28,7 +26,12 @@ export default function Trade() {
                 {trade.map((element) => {
                     return( 
                         <div className="container">
-                            <Link to = {`item/${element._id}`}><img src={element.images}/>
+                            <div>Type: {element.type}</div>
+                            <div>Price: {element.cost}</div>
+                            <div>STR: {element.STR}</div>
+                            <div>DEX: {element.DEX}</div>
+                            <div>Mana: {element.Mana}</div>
+                            <Link to = {`item/${element._id}`}><button> View Item </button>
                             <div>{element.item}</div></Link>
                         </div>
                     )
@@ -36,4 +39,24 @@ export default function Trade() {
             </div>
         </div>
     )
+
+    
+
+    // return (
+    //     <div>
+    //         <div className="button">
+    //             <Link to = '/itemPost'> <button> Add Item </button> </Link>
+    //         </div>
+    //         <div className="main">
+    //             {trade.map((element) => {
+    //                 return( 
+    //                     <div className="container">
+    //                         <Link to = {`item/${element._id}`}><img src={element.images}/>
+    //                         <div>{element.item}</div></Link>
+    //                     </div>
+    //                 )
+    //             })}
+    //         </div>
+    //     </div>
+    // )
 }
