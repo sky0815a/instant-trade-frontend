@@ -44,24 +44,4 @@ export default function Trade() {
             </div>
         </div>
     )
-
-    
-
-    // return (
-    //     <div>
-    //         <div className="button">
-    //             <Link to = '/itemPost'> <button> Add Item </button> </Link>
-    //         </div>
-    //         <div className="main">
-    //             {trade.map((element) => {
-    //                 return( 
-    //                     <div className="container">
-    //                         <Link to = {`item/${element._id}`}><img src={element.images}/>
-    //                         <div>{element.item}</div></Link>
-    //                     </div>
-    //                 )
-    //             })}
-    //         </div>
-    //     </div>
-    // )
 }
