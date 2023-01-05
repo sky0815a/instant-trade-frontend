@@ -3,10 +3,13 @@ import { useState } from "react";
 import { useEffect } from 'react';
 import axios from 'axios';
 import { Link } from "react-router-dom";
+import { calculateNewValue } from "@testing-library/user-event/dist/utils";
+
 
 
 export default function Trade() {
     const [trade, setTrade] = useState([]); 
+    const [searchTerm, setSearchTerm] = useState("");
 
     useEffect(() => {
         axios.get('http://localhost:8080/item')
@@ -19,11 +22,24 @@ export default function Trade() {
 
     return (
         <div>
+            <input
+                type="text"
+                placeholder="Ring or Amulet"
+                onChange={(event) => {
+                    setSearchTerm(event.target.value);
+                }}
+            />
             <div className="button">
                 <Link to = '/itemPost'> <button> Add Item </button> </Link>
             </div>
             <div className="main">
-                {trade.map((element) => {
+                {trade.filter((val) => {
+                    if (searchTerm == "") {
+                        return val
+                    } else if (val.type.toLowerCase().includes(searchTerm.toLocaleLowerCase())) {
+                        return val
+                    }
+                }).map((element) => {
                     return( 
                         <div className="container">
                             <div>Game: {element.Game}</div>
@@ -44,24 +60,4 @@ export default function Trade() {
             </div>
         </div>
     )
-
-    
-
-    // return (
-    //     <div>
-    //         <div className="button">
-    //             <Link to = '/itemPost'> <button> Add Item </button> </Link>
-    //         </div>
-    //         <div className="main">
-    //             {trade.map((element) => {
-    //                 return( 
-    //                     <div className="container">
-    //                         <Link to = {`item/${element._id}`}><img src={element.images}/>
-    //                         <div>{element.item}</div></Link>
-    //                     </div>
-    //                 )
-    //             })}
-    //         </div>
-    //     </div>
-    // )
 }
