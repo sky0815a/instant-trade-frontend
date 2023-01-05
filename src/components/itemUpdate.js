@@ -5,7 +5,7 @@ import { Link, useParams } from 'react-router-dom';
 function UpdateItem() {
     const { id } = useParams();
     console.log(id);
-    const BASE_URL = 'http://localhost:8080/item'
+    const BASE_URL = 'https://instant-trade-backend.herokuapp.com/item'
     const [updateForm, setUpdateForm] = useState({
 
         Game: "",

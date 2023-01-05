@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 
 function AddItem() {
-    const BASE_URL = 'http://localhost:8080/item'
+    const BASE_URL = 'https://instant-trade-backend.herokuapp.com/item'
     const [newForm, setNewForm] = useState({
 
         type: "",

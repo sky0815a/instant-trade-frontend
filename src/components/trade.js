@@ -15,7 +15,7 @@ export default function Trade() {
     useEffect(() => {
         const getAllItems = async () => {
             try {
-                const url = 'http://localhost:8080/item'
+                const url = 'https://instant-trade-backend.herokuapp.com/item'
                 const { data } = await axios.get(url);
                 setTrade( data )
             } catch(err) {

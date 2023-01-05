@@ -8,7 +8,7 @@ import itemUpdate from "./itemUpdate"
 export default function ItemID(props) {
   const { id } = useParams();
   const [ItemID, setItemID] = useState([]);
-  const URL = `http://localhost:8080/item/${id}`;
+  const URL = `https://instant-trade-backend.herokuapp.com/item/${id}`;
   const getItem = async () => {
     try {
       const response = await fetch(URL);
