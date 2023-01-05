@@ -35,7 +35,7 @@ export default function Trade() {
                 }}
             />
             <div className="button">
-                <Link to = '/itemPost'> <button> Add Item </button> </Link>
+                <Link to = '/itemPost'> <button type="button" className="btn btn-warning">Add Item</button> </Link>
             </div>
             <div className="main">
                 {trade.filter((val) => {
@@ -57,7 +57,7 @@ export default function Trade() {
                             <div>Energy: {element.Energy}</div>
                             <div>Faster Cast Rate: {element.Faster_Cast_Rate}</div>
                             <div>All Skill LV: {element.All_Skill_LV}</div>
-                            <Link to = {`item/${element._id}`}><button> View Item </button>
+                            <Link to = {`item/${element._id}`}><button type="button" className="btn btn-outline-warning">View Item</button>
                             <div>{element.item}</div></Link>
                         </div>
                     )
