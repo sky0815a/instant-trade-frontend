@@ -11,14 +11,19 @@ export default function Trade() {
     const [trade, setTrade] = useState([]); 
     const [searchTerm, setSearchTerm] = useState("");
 
+
     useEffect(() => {
-        axios.get('http://localhost:8080/item')
-          .then((response) => response.data)
-          .then((response) => {
-            console.log(response)
-            setTrade(response) 
-          })
-    }, []);
+        const getAllItems = async () => {
+            try {
+                const url = 'http://localhost:8080/item'
+                const { data } = await axios.get(url);
+                setTrade( data )
+            } catch(err) {
+                console.log(err);
+            }
+        }
+        getAllItems();
+    },[]);
 
     return (
         <div>
