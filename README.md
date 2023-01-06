@@ -22,5 +22,5 @@ MongoDB
 
 
 ### Deployment
-Frontend:
+Frontend: https://instant-trade-frontend.herokuapp.com/
 Backend: https://instant-trade-backend.herokuapp.com/item
