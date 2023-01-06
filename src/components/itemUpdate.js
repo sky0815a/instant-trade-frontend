@@ -66,13 +66,12 @@ function UpdateItem() {
         const data = { ...updateForm, [e.target.name]: e.target.value }
         setUpdateForm(data)
     }
-    const Game = updateForm.Game
     return (
         <div className='updateItem'>
             <h2>Update Item Info</h2>
             <form onSubmit={handleSubmit}>
                 <label for="Game">Game Name: </label>
-                <input type="text" value={updateForm.Game} name="Game" onChange={handleChange} placeholder={Game} />
+                <input type="text" value={updateForm.Game} name="Game" onChange={handleChange} />
                 <br />
                 <label for="PW">Game PW: </label>
                 <input type="text" value={updateForm.PW} name="PW" onChange={handleChange} />
