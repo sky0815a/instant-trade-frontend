@@ -55,7 +55,7 @@ export default function ItemID(props) {
   }, []);
 
   return (
-    <div>
+    <div className="viewItem">
       <div className="container">
         <div>Game: {ItemID.Game}</div>
         <div>PW: {ItemID.PW}</div>

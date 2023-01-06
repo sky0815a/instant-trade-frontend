@@ -14,7 +14,7 @@
   margin-bottom: 70px;
 }
 
-.itemPost {
+.itemPost, .updateItem, .viewItem {
   text-align: center;
 }
 

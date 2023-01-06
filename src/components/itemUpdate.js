@@ -67,7 +67,7 @@ function UpdateItem() {
         setUpdateForm(data)
     }
     return (
-        <div>
+        <div className='updateItem'>
             <h2>Update Item Info</h2>
             <form onSubmit={handleSubmit}>
                 <label for="Game">Game Name: </label>
