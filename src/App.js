@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router';
-import { useEffect, useState } from 'react';
-import axios from "axios";
+// import { useEffect, useState } from 'react';
+// import axios from "axios";
 import './App.css';
 import Footer from './components/footer';
 import Title from './components/title';
