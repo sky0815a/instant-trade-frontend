@@ -1,4 +1,4 @@
-import { Routes,Route } from 'react-router';
+import { Routes, Route } from 'react-router';
 import { useEffect, useState } from 'react';
 import axios from "axios";
 import './App.css';
@@ -14,10 +14,10 @@ function App() {
     <div className="App">
       <Title />
       <Routes>
-        <Route exact path ="/" element={<Trade />}/>
-        <Route exact path = "/itemPost" element={<ItemPost/>}/>
-        <Route exact path = "/item/:id" element={<ItemID/>}/> 
-        <Route exact path = "/item/:id/update" element={<ItemUpdate/>}/>
+        <Route exact path="/" element={<Trade />} />
+        <Route exact path="/itemPost" element={<ItemPost />} />
+        <Route exact path="/item/:id" element={<ItemID />} />
+        <Route exact path="/item/:id/update" element={<ItemUpdate />} />
       </Routes>
       <Footer />
     </div>

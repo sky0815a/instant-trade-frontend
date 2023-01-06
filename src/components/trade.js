@@ -27,17 +27,19 @@ export default function Trade() {
 
     return (
         <div>
-            <input
-                type="text"
-                placeholder="Ring or Amulet"
-                onChange={(event) => {
-                    setSearchTerm(event.target.value);
-                }}
-            />
-            <div className="button">
-                <Link to = '/itemPost'> <button type="button" className="btn btn-warning">Add Item</button> </Link>
+            <div className="search">
+                <input
+                    type="text"
+                    placeholder="Ring or Amulet"
+                    onChange={(event) => {
+                        setSearchTerm(event.target.value);
+                    }}
+                />
+                <div className="button">
+                    <Link to = '/itemPost'> <button type="button" className="btn btn-warning">Add Item</button> </Link>
+                </div>
             </div>
-            <div className="main">
+            <div class="main">
                 {trade.filter((val) => {
                     if (searchTerm == "") {
                         return val
@@ -46,17 +48,29 @@ export default function Trade() {
                     }
                 }).map((element) => {
                     return( 
-                        <div className="container">
-                            <div>Game: {element.Game}</div>
-                            <div>PW: {element.PW}</div>
-                            <div>Type: {element.type}</div>
-                            <div>Price: {element.cost}</div>
-                            <div>STR: {element.STR}</div>
-                            <div>DEX: {element.DEX}</div>
-                            <div>Vital: {element.Vital}</div>
-                            <div>Energy: {element.Energy}</div>
-                            <div>Faster Cast Rate: {element.Faster_Cast_Rate}</div>
-                            <div>All Skill LV: {element.All_Skill_LV}</div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col">
+                                    <div>Type: {element.type}</div>
+                                </div>
+                                <div class="col">
+                                    <div>Price: {element.cost}</div>
+                                </div>
+                                <div class="col">
+                                    <div>Game: {element.Game}</div>
+                                </div>
+                                <div class="col">
+                                    <div>PW: {element.PW}</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>STR: {element.STR}</div>
+                                <div>DEX: {element.DEX}</div>
+                                <div>Vital: {element.Vital}</div>
+                                <div>Energy: {element.Energy}</div>
+                                <div>Faster Cast Rate: {element.Faster_Cast_Rate}</div>
+                                <div>All Skill LV: {element.All_Skill_LV}</div>
+                            </div>
                             <Link to = {`item/${element._id}`}><button type="button" className="btn btn-outline-warning">View Item</button>
                             <div>{element.item}</div></Link>
                         </div>

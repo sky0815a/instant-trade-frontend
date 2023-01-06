@@ -6,7 +6,7 @@ function AddItem() {
     const [newForm, setNewForm] = useState({
 
         type: "",
-        cost: "",
+        price: "",
         STR: "",
         DEX: "",
         Mana: "",
@@ -44,7 +44,7 @@ function AddItem() {
             Game: "",
             PW: "",
             type: "",
-            cost: "",
+            price: "",
             STR: "",
             DEX: "",
             Vital: "",
@@ -60,10 +60,10 @@ function AddItem() {
         setNewForm(data)
     }
     return (
-        <div>
+        <div className='itemPost'>
             <h2>Add Item with Options</h2>
             <form onSubmit={handleSubmit}>
-                <label for="Game">Game Name: </label>
+                <label for="Game">Game Name:&nbsp</label>
                 <input type="text" value={newForm.Game} name="Game" onChange={handleChange} />
                 <br />
                 <label for="PW">Game PW: </label>
@@ -72,7 +72,7 @@ function AddItem() {
                 <label for="type">Type: Ring or Amulet: </label>
                 <input type="text" value={newForm.type} name="type" onChange={handleChange} />
                 <br />
-                <label for="cost">Cost: </label>
+                <label for="cost">Price: </label>
                 <input type="text" value={newForm.cost} name="cost" onChange={handleChange} />
                 <br />
                 <label for="STR">STR: </label>

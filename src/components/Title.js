@@ -2,8 +2,8 @@ import React from 'react';
 
 const title = () => {
   return (
-    <div>
-      <h2>Instant Trade</h2>
+    <div className='title'>
+      <h1>Instant Trade</h1>
     </div>
   );
 }

@@ -71,7 +71,7 @@ function UpdateItem() {
             <h2>Update Item Info</h2>
             <form onSubmit={handleSubmit}>
                 <label for="Game">Game Name: </label>
-                <input type="text" value={updateForm.Game} name="Game" onChange={handleChange} />
+                <input type="text" value={updateForm.Game} name="Game" onChange={handleChange} placeholder={updateForm.Game} />
                 <br />
                 <label for="PW">Game PW: </label>
                 <input type="text" value={updateForm.PW} name="PW" onChange={handleChange} />
@@ -79,7 +79,7 @@ function UpdateItem() {
                 <label for="type">Type: Ring or Amulet: </label>
                 <input type="text" value={updateForm.type} name="type" onChange={handleChange} />
                 <br />
-                <label for="cost">Cost: </label>
+                <label for="cost">Price: </label>
                 <input type="text" value={updateForm.cost} name="cost" onChange={handleChange} />
                 <br />
                 <label for="STR">STR: </label>
