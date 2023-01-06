@@ -63,7 +63,7 @@ function AddItem() {
         <div className='itemPost'>
             <h2>Add Item with Options</h2>
             <form onSubmit={handleSubmit}>
-                <label for="Game">Game Name:&nbsp</label>
+                <label for="Game">Game Name:</label>
                 <input type="text" value={newForm.Game} name="Game" onChange={handleChange} />
                 <br />
                 <label for="PW">Game PW: </label>
