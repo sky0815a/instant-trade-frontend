@@ -1,20 +1,29 @@
-# Getting Started with Create React App
+# Instant Trade: Post Your Item & Grab What You Want
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Instead of posting a thread on the forum with random, unorganized description with your item,
+post it here so other gamers can see it and meet you right in!
 
-## Available Scripts
+## User Story: Why Instant Trade?
 
-In the project directory, you can run:
+If you want to trade NOW and got sick of leaving note, sending message and waiting for reply back,
+just go ahead and join open-game now!
 
-### `npm start`
+You don't need to log-in
+You don't need to PAY an item through 3rd Party
+You don't need to wait forever to arrange the meeting
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Just go Now
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Tech being used
+React.js
+Node.js
+express.js
+MongoDB
 
-### `npm test`
+
+### Deployment
+Frontend:
+Backend: https://instant-trade-backend.herokuapp.com/item
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
